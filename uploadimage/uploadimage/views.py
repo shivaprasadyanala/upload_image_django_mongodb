@@ -12,7 +12,7 @@ def upload_image(request):
         form = ImageForm(request.POST, request.FILES)
         if form.is_valid():
             image=request.FILES["image_file"]
-            genai.configure(api_key="API_KEY")
+            genai.configure(api_key="AIzaSyD0qQm-WS-Uyb7F9Pdj_oivinzlaPdtZTs")
             img1 = PIL.Image.open(image)
             model = genai.GenerativeModel('gemini-pro-vision')
             response = model.generate_content(img1)
